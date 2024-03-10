@@ -1,7 +1,7 @@
-Ext.define('MyApp.model.Base', {
+Ext.define('MsTraining.model.Base', {
     extend: 'Ext.data.Model',
 
     schema: {
-        namespace: 'MyApp.model'
+        namespace: 'MsTraining.model'
     }
 });

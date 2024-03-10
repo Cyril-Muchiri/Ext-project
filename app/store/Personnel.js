@@ -1,9 +1,9 @@
-Ext.define('MyApp.store.Personnel', {
+Ext.define('MsTraining.store.Personnel', {
     extend: 'Ext.data.Store',
 
     alias: 'store.personnel',
 
-    model: 'MyApp.model.Personnel',
+    model: 'MsTraining.model.Personnel',
 
     data: { items: [
         { name: 'Jean Luc', email: "jeanluc.picard@enterprise.com", phone: "555-111-1111" },
@@ -13,7 +13,7 @@ Ext.define('MyApp.store.Personnel', {
     ]},
 
     proxy: {
-        type: 'memory',
+        type: 'memory',//rest, jsonp,ajax
         reader: {
             type: 'json',
             rootProperty: 'items'

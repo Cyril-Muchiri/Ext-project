@@ -5,7 +5,7 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('MyApp.view.main.Main', {
+Ext.define('MsTraining.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
 
@@ -13,9 +13,9 @@ Ext.define('MyApp.view.main.Main', {
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 
-        'MyApp.view.main.MainController',
-        'MyApp.view.main.MainModel',
-        'MyApp.view.main.List'
+        'MsTraining.view.main.MainController',
+        'MsTraining.view.main.MainModel',
+        'MsTraining.view.main.List'
     ],
 
     controller: 'main',
@@ -47,7 +47,6 @@ Ext.define('MyApp.view.main.Main', {
             overflowHandler: 'none'
         }
     },
-    
 
     responsiveConfig: {
         tall: {
@@ -76,29 +75,44 @@ Ext.define('MyApp.view.main.Main', {
     },
 
     items: [{
+        title: 'Static Data Management',
+        iconCls: 'fa-users',
+        items: [
+            {
+                xtype: 'parentpanel'
+            }
+        ]
+    }, {
+        title: 'Posts',
+        iconCls: 'fa-user',
+        items: [
+            /* {
+                xtype: 'postgrid'
+            } */
+        ]
+    },
+    {
         title: 'Home',
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
         items: [{
             xtype: 'mainlist'
         }]
-    }, {
-        title: 'Users',
-        iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Groups',
+    },
+    {
+        title: 'Static Data Management',
         iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
+        items: [
+            {
+                xtype: 'parentpanel'
+            }
+        ]
+    },
+    {
         title: 'Settings',
         iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [
+
+        ]
     }]
 });
