@@ -1,21 +1,42 @@
 Ext.define('MsTraining.view.posts.PostGrid', {
     extend: 'Ext.grid.Panel',
     xtype: 'postgrid',
-    reference:'postgrid',
+    reference: 'postgrid',
     controller: 'postgridviewcontroller',
     store: {
         type: 'posts'
     },
     tbar: [{
         text: 'Add Post',
+        iconCls: 'fas fa-plus',
         listeners: {
             click: 'onAddPostClicked'
+        }
+    },
+    {
+        text: 'Edit/View Post',
+        iconCls: 'fas fa-pencil-alt',
+        listeners: {
+            click: 'onEditClicked'
+        }
+    },
+    {
+        text: 'Delete Post',
+        iconCls: 'far fa-trash-alt',
+        listeners: {
+            click: 'onDeleteClicked'
         }
     },
     {
         text: 'Form fields',
         listeners: {
             click: 'onFormFieldsClicked'
+        }
+    },
+     {
+        text: 'VTypes',
+        listeners: {
+            click: 'onVTypesClicked'
         }
     },
     {
@@ -39,6 +60,6 @@ Ext.define('MsTraining.view.posts.PostGrid', {
         displayInfo: true
     },
     scrollable: true,
-   
+
 
 })

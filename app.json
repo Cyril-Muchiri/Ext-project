@@ -4,7 +4,7 @@
     "version": "1.0.0.0",
     "framework": "ext",
     "toolkit": "classic",
-    "theme": "theme-triton",
+    "theme": "theme-material",
 
     /**
      * The list of required packages (with optional versions; default is "latest").
@@ -33,6 +33,15 @@
     "classpath": [
         "app"
     ],
+    "material": {
+
+        "toolbar": {
+    
+            "color": "#995a5c",
+    
+            "dynamic": true
+        }
+    },
 
     /**
      * Comma-separated string with the paths of directories or files to search. Any classes
@@ -45,7 +54,8 @@
         "overrides"
     ],
 
-    /**
+    /**baseWeight: accent: '300',
+            // accentWeight: '300',
      * Fashion build configuration properties.
      */
     "fashion": {

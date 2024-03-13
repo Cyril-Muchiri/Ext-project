@@ -7,7 +7,7 @@ Ext.define('MsTraining.view.users.UserGrid', {
     store: {
         type: 'users'
     },
-    height: 1000,
+    height: 800,
     plugins: {
         cellediting: {
             clicksToEdit: 1
@@ -17,7 +17,7 @@ Ext.define('MsTraining.view.users.UserGrid', {
         selType: 'cellmodel',
     },
     columns: [
-            // {xtype: 'rownumberer'},
+            {xtype: 'rownumberer'},
         {
             dataIndex: '_id',
             text: 'ID'
