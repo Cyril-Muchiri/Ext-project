@@ -3,11 +3,11 @@ Ext.define('MsTraining.store.Posts',{
     alias: 'store.posts',
     model: 'MsTraining.model.Post',
     requires: ['MsTraining.model.Post'],
-   
     sorters: ['id', 'title'],
-    pageSize:25,
-    /* filters: {
-        property: 'userId',
-        value: '10'
-    } */
+
+    // filters: {
+    //     property: 'userId',
+    //     value: '3'
+    // }
+
 })

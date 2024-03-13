@@ -1,46 +1,17 @@
-Ext.define('MsTraining.model.Comment', {
+Ext.define('MsTraining.model.Comment',{
     extend: 'Ext.data.Model',
-    requires: ['MsTraining.model.Post'],
-    fields: [
-        {
-            name: 'postId', reference: 'Post', type: 'int'
-        },
-        'id', 'name', 'body'
+    idProperty: '_id',
+    fields:[
+        '_id','postId','name','email','body'
     ],
     proxy: {
-        type: 'rest',
+        type: 'rest', // type of call
         url: 'https://jsonplaceholder.typicode.com/comments',
         reader: {
-            type: 'json'
+            type: 'json',
+            rootProperty: 'rows',
+            totalProperty: 'totalCount'
         }
-    },
-    validators: {
-       
-        name: [ { type: 'length', min: 7 }],
     }
-
-
-
-}, function () {
-    //traverse
-    MsTraining.model.Post.load(1, {
-        callback: function (post) {
-            // console.log('Post: ' + post.get('title'));
-            post.comments(function (comments) {
-                comments.each(function (comment) {
-                    //console.log('Comment: ' + comment.get('name') + "commentId" + comment.get("id"));
-                });
-            });
-        }
-    });
-    //inverse relationship
-    MsTraining.model.Comment.load(1, {
-        callback: function (comment) {
-            comment.getPost(function (post) {
-                console.log('Got post from comment: ' + post.get('title'));
-            });
-        }
-    });
-   
 
 })

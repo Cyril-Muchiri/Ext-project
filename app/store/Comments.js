@@ -1,5 +1,7 @@
 Ext.define('MsTraining.store.Comments', {
     extend: 'Ext.data.Store',
-    model:'MsTraining.model.Comment',
-    autoLoad:true
+    alias: 'store.comments',
+    model: 'MsTraining.model.Comment',
+    requires: ['MsTraining.model.Comment'],
+    autoLoad: true
 })

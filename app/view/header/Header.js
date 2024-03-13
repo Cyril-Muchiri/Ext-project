@@ -18,8 +18,8 @@ Ext.define('MsTraining.view.header.Header', {
     {
         xtype: 'tbfill'
     },
-   
-   
+
+
     {
         xtype: 'button', 
         itemId: 'logout', 

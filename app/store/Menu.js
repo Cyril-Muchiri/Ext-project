@@ -7,22 +7,23 @@ Ext.define('MsTraining.store.Menu',{
         children: [
             {
                 text: 'Security',
-                iconCls:'fas fa-users-cog',
+                iconCls:'fa-lock',
                 children:[
                     {
                         text:'Users',
-                        iconCls:'fa fa-users',
+                        iconCls:'fa-user',
                         className:'usergrid',
                         leaf:true
                     },
                     {
-                        text: 'Todos',
-                        iconCls: 'fas fa-user-secret',
-                        className: 'todogrid',
+                        text: 'Comment',
+                        iconCls: 'fa-comment',
+                        className:'commentgrid',
                         leaf: true
                     }
+                   
                 ]
-              
+
             },
             {
                 text: 'Static Data',
@@ -30,20 +31,27 @@ Ext.define('MsTraining.store.Menu',{
                 children: [
                     {
                         text: 'Posts',
-                        iconCls: 'fa fa-users',
-                        className: 'postgrid',
+                        iconCls: 'fa-book',
+                        className:'postgrid',
                         leaf: true
                     },
                     {
-                        text: 'Personnel',
-                        iconCls: 'fa fa-users',
-                        leaf:true,
-                        className: 'mainlist',
+                        text: 'Albums',
+                        iconCls: 'fa-address-card',
+                        className:'albumgrid',
+                        leaf: true
+                    },
+                    {
+                        text: 'Todos',
+                        iconCls: 'fa-list-ul',
+                        className:'todogrid',
+                        leaf: true
                     }
+                    
                 ]
 
             },
-            
+
         ]
     }
 })

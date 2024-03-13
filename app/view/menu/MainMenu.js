@@ -3,8 +3,7 @@ Ext.define('MsTraining.view.menu.MainMenu',{
     xtype:'mainmenu',
     itemId:'mainmenu',
     rootVisible: false,
-    useArrows: true,
-    
+   useArrows: true,
     store:{
         type:'menu'
     },

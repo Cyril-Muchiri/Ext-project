@@ -52,7 +52,6 @@ Ext.define('MsTraining.view.modelbinding.ModelBindingForm', {
                 publishes: 'value',
                 fieldLabel: 'Select State',
                 displayField: 'state',
-               
                 store: {
                     type: 'states'
                 },
@@ -60,12 +59,20 @@ Ext.define('MsTraining.view.modelbinding.ModelBindingForm', {
                 queryMode: 'local',
                 typeAhead: true,
                 valueField:'abbr',
-                
-                listeners:{
-                    select:'onStateSelected',
-                    change:'onStateSelectionChange'
-                }
             },
+            {
+                xtype: 'combobox',
+                reference: 'cities',
+                fieldLabel: 'Select City',
+                displayField: 'city',
+                store: {
+                    type: 'cities',
+                    autoLoad: true
+                },
+                queryMode: 'local',
+                typeAhead: true,
+                valueField: 'cityId'
+            }
             
             ]
         }

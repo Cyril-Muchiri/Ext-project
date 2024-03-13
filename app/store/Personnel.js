@@ -13,7 +13,7 @@ Ext.define('MsTraining.store.Personnel', {
     ]},
 
     proxy: {
-        type: 'memory',//rest, jsonp,ajax
+        type: 'memory',
         reader: {
             type: 'json',
             rootProperty: 'items'

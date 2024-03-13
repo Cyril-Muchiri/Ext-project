@@ -9,9 +9,9 @@ Ext.define('MsTraining.model.Post',{
         url: 'http://localhost:3000/posts',
         reader: {
             type: 'json',
-            rootProperty:'rows',
-            totalProperty:'totalCount'
+            rootProperty: 'rows',
+            totalProperty: 'totalCount'
         }
     }
-   
+
 })

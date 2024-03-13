@@ -86,7 +86,7 @@ Ext.define('MsTraining.view.layouts.ColumnLayout', {
                                 name: 'id',
                                 emptyText: 'Todo id'
                             },
-                            
+
                             {
                                 allowBlank: false,
                                 xtype: 'textfield',
@@ -95,7 +95,7 @@ Ext.define('MsTraining.view.layouts.ColumnLayout', {
                                 name: 'title',
                                 emptyText: 'title'
                             },
-                            
+
                         ],
 
                     }
@@ -114,7 +114,7 @@ Ext.define('MsTraining.view.layouts.ColumnLayout', {
                         modelValidation: true,
                         layout: 'anchor',
                         items: [
-                          
+
                             {
                                 allowBlank: false,
                                 xtype: 'textfield',
@@ -131,7 +131,7 @@ Ext.define('MsTraining.view.layouts.ColumnLayout', {
                                 name: 'name',
                                 emptyText: 'name'
                             },
-                          
+
                         ],
 
                     }

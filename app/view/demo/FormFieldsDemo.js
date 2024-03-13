@@ -67,7 +67,7 @@ Ext.define('MsTraining.view.demo.FormFieldsDemo',{
                     name:'body',
                     fieldLabel:'Body',
                 }
-              
+
             ]
         }
     ],

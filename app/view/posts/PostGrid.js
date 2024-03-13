@@ -3,6 +3,7 @@ Ext.define('MsTraining.view.posts.PostGrid', {
     xtype: 'postgrid',
     reference: 'postgrid',
     controller: 'postgridviewcontroller',
+    scrollable: 'y',
     store: {
         type: 'posts'
     },
@@ -16,35 +17,22 @@ Ext.define('MsTraining.view.posts.PostGrid', {
     {
         text: 'Edit/View Post',
         iconCls: 'fas fa-pencil-alt',
-        listeners: {
-            click: 'onEditClicked'
-        }
+        handler: 'onViewPost',
+        bind:{
+            disabled: '{!postgrid.selection}'
+        },
     },
     {
         text: 'Delete Post',
         iconCls: 'far fa-trash-alt',
         listeners: {
             click: 'onDeleteClicked'
-        }
+        },
+        bind:{
+            disabled: '{!postgrid.selection}'
+        },
     },
-    {
-        text: 'Form fields',
-        listeners: {
-            click: 'onFormFieldsClicked'
-        }
-    },
-     {
-        text: 'VTypes',
-        listeners: {
-            click: 'onVTypesClicked'
-        }
-    },
-    {
-        text: 'Layouts',
-        listeners: {
-            click: 'onLayoutsClicked'
-        }
-    }],
+    ],
     columns: [
         { dataIndex: '_id', text: 'ID' },
         { dataIndex: 'title', text: 'Title', flex: 1 },
@@ -60,6 +48,5 @@ Ext.define('MsTraining.view.posts.PostGrid', {
         displayInfo: true
     },
     scrollable: true,
-
 
 })

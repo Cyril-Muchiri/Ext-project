@@ -21,9 +21,9 @@ Ext.define('MsTraining.view.layouts.HBoxVBoxLayout', {
                     fieldLabel: 'Second Name'
                 }
             ]
-            
+
         },
-        
+
         {
             xtype: 'panel',
             layout: 'vbox',
