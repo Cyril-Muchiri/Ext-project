@@ -32,7 +32,7 @@ Ext.define('MsTraining.view.todos.TodoForm', {
                     bind:{
                         value:'{record._id}'
                     },
-                    readOnly:true
+                    // readOnly:true
                 },
                 {
                     fieldLabel: 'Title',
