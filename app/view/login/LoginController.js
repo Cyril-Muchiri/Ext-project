@@ -8,7 +8,7 @@ Ext.define('MsTraining.view.login.LoginController', {
         // a server-side lookup. We'll just move forward for the sake of this example.
 
         // Set the localStorage value to true
-        localStorage.setItem("MsTrainingLoggedIn", true);
+        localStorage.setItem("hasAccessToUsers", true);
 
         // Remove Login Window
         this.getView().destroy();

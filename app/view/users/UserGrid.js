@@ -14,7 +14,7 @@ Ext.define('MsTraining.view.users.UserGrid', {
         }
     },
     columns: [{
-            xtype: 'rownumberer',
+            // xtype: 'rownumberer',
         },
         {
             dataIndex: '_id',

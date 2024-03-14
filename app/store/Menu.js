@@ -8,20 +8,19 @@ Ext.define('MsTraining.store.Menu', {
             {
                 text: 'Security',
                 iconCls: 'fa-lock',
-                children: [
+                children:[
                     {
-                        text: 'Users',
-                        iconCls: 'fa-user',
-                        className: 'usergrid',
-                        leaf: true
+                        text:'Users',
+                        iconCls:'fa fa-users',
+                        className:'users',
+                        leaf:true
                     },
                     {
-                        text: 'Comment',
-                        iconCls: 'fa-comment',
-                        className: 'commentgrid',
+                        text: 'Todos',
+                        iconCls: 'fas fa-user-secret',
+                        className: 'todogrid',
                         leaf: true
                     }
-
                 ]
 
             },
