@@ -17,11 +17,11 @@ Ext.define('MsTraining.view.users.UserGridController', {
         let userGrid = this.getView();
         let lowerPanel = Ext.ComponentQuery.query('userdetailstab')[0];
         if (userGrid.getHeight() === 600) {
-            userGrid.setHeight(400)
-            lowerPanel.setHeight(400)
+            userGrid.setHeight(300)
+            lowerPanel.setHeight(300)
             btn.setText("Hide Details")
         } else {
-            userGrid.setHeight(600)
+            userGrid.setHeight(500)
             lowerPanel.setHeight(0)
             btn.setText("Show Details")
         }

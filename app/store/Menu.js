@@ -31,7 +31,7 @@ Ext.define('MsTraining.store.Menu', {
                     {
                         text: 'Posts',
                         iconCls: 'fa-book',
-                        className: 'postgrid',
+                        className: 'posts',
                         leaf: true
                     },
                     {

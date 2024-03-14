@@ -9,7 +9,7 @@ Ext.define('MsTraining.view.main.MainController', {
 
     routes: {
         'home': 'onHomeRoute',
-        'users|reviewpanel|mainlist|postgrid|todogrid': {
+        'users|reviewpanel|mainlist|posts|todogrid': {
             action: 'onRoute',
             before: 'onBeforeRoute'
         },
@@ -49,6 +49,7 @@ Ext.define('MsTraining.view.main.MainController', {
     }
 ,
 
+
     onHomeRoute: function () {
         let mainPanel = this.getMainPanel();
         if (mainPanel) {
@@ -70,7 +71,7 @@ Ext.define('MsTraining.view.main.MainController', {
         //TODO: on failure => action.stop()
 
         var hasAccessToUsers = localStorage.getItem("hasAccessToUsers");
-        if (true) {
+        if (hasAccessToUsers) {
             action.resume()
         } else {
             Ext.Msg.show({
